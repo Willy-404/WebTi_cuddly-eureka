@@ -9,6 +9,10 @@
         img{
             width: 100px;
         }
+        table,td,caption,th{
+            border:1px solid black;
+            border-collapse: collapse;
+        }
     </style>
 
 </head>
@@ -25,6 +29,64 @@
         <input type = "text">
         <input type = "date">
         <input type = "checkbox">
+        <h3>Lista não ordenada</h3>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 1</li>
+        </ul>
+        <h3>Lista Ordenada</h3>
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+        </ol>
+        <h3>Tabelas no HTML</h3>
+        <p>Table - Define uma tabela</p>
+        <p>tr - row define uma linha de tabela</p>
+        <p>td - data define uma celula</p>
+        <p>Caption - define nome tablea</p>
+        <p>th - define celula de nome de coluna</p>
+
+        <table style = "border:1px solid black">
+            <caption> tabela </caption>
+            <tr>
+                <td>1x1</td>
+                <td>1x2</td>
+                <td>1x3</td>
+            </tr>
+            <tr>
+                <td>2x1</td>
+                <td>2x2</td>
+                <td>2x3</td>
+            </tr>
+            <tr>
+                <td>1x1</td>
+                <td>2x2</td>
+                <td>3x3</td>
+            </tr>
+        </table>
+
+        <h2>Tabela com Span</h2>
+        
+        <table style = "border:1px solid black">
+            <caption> tabela </caption>
+            <tr>
+                <th rowspan="3">itens</th>
+                <th>1x1</th>
+                <th>1x2</th>
+                <th>1x3</th>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="1">2x1</td>
+                <td>2x2</td>
+                <td>2x3</td>
+            </tr>
+            <tr>
+                <td>1x1</td>
+                <td>2x2</td>
+                <td>3x3</td>
+            </tr>
+        </table>
+
         <p>Minha Caixinha</p>
         <p>Minha Caixinha</p>
     </div>
