@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-ale=1.0">
+    <title>Estados</title>
+
+    <style>
+        *{
+            margin:1%;
+            padding:2px;
+        }
+        img{
+            width: 120px;
+            height:50px;
+        }
+        table,td,caption,th{
+            display: inline,block;
+            margin-left: 20%;
+            margin-right: 20%;
+            
+            border-color: seagreen;
+            border-style: ridge;
+            border-collapse: collapse;
+            border-width: 5px;
+            border-top-color: rebeccapurple;
+            border-radius:5px;
+
+            outline: 1px solid black;
+            background-color:beige;
+
+            background-image: url(imagens/castelo.svg);
+            background-position: right;
+            background-size: 10%;
+            background-repeat: no-repeat;
+
+            animation: rotacao 0s linear 0s infinite;
+        }
+
+        @keyframes rotacao {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(300deg);
+            }
+        }
+        
+        h1{
+            display:inline-block;
+            border: 1px solid black;
+            margin-left: 35%;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tabela</h1>
+    <table style = "border:2px solid black">
+        <caption> Gaspar é meu País </caption>
+        <tr>
+            <th>Estado</th>
+            <th>População</th>
+            <th>Capital</th>
+            <th>Região</th>
+            <th>Bandeira</th>
+        </tr>
+        <tr>
+            <td>Santa Catarina</td>
+            <td>8 Milhões</td>
+            <td>Florianopolis</td>
+            <td>Região Sul</td>
+            <th><img id="" src="bandeiras/SantaCatarina.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Rio Grande do Sul</td>
+            <td>10,8 Milhões</td>
+            <td>Porto Alegre</td>
+            <td>Região Sul</td>
+            <th><img id="" src="bandeiras/RioGrandreDoSul.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Paraná</td>
+            <td>11,8 Milhões</td>
+            <td>Curitiba</td>
+            <td>Região Sul</td>
+            <th><img id="" src="bandeiras/Parana.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>São Paulo</td>
+            <td>46 Milhões</td>
+            <td>São Paulo</td>
+            <td>Região Sudeste</td>
+            <th><img id="" src="bandeiras/SaoPaulo.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Rio Janeiro</td>
+            <td>16 Milhões</td>
+            <td>Rio de Janeiro</td>
+            <td>Região Sudeste</td>
+            <th><img id="" src="bandeiras/CrimeOrganizado.jpg" alt=""></th>
+        </tr>
+        <tr>
+            <td>Minas Gerais</td>
+            <td>20,5 Milhões</td>
+            <td>Belo Horizonte</td>
+            <td>Região Sudeste</td>
+            <th><img id="" src="bandeiras/MinasGerais.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Espírito Santo</td>
+            <td>4 Milhões</td>
+            <td>Vitória</td>
+            <td>Região Sudeste</td>
+            <th><img id="" src="bandeiras/EspiritoSanto.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Bahia</td>
+            <td>14,5 Milhões</td>
+            <td>Salvador</td>
+            <td>Região Nordeste</td>
+            <th><img id="" src="bandeiras/Bahia.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Sergipe</td>
+            <td>2,9 Milhões</td>
+            <td>Aracaju</td>
+            <td>Região Nordeste</td>
+            <th><img id="" src="bandeiras/Sergipe.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Pernambuco</td>
+            <td>9 Milhões</td>
+            <td>Recife</td>
+            <td>Região Nordeste</td>
+            <th><img id="" src="bandeiras/Pernambuco.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Paraíba</td>
+            <td>3,9 Milhões</td>
+            <td>João Pessoa</td>
+            <td>Região Nordeste</td>
+            <th><img id="" src="bandeiras/Paraíba.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Rio Grande do Norte</td>
+            <td>3,3 Milhões</td>
+            <td>Natal</td>
+            <td>Região Nordeste</td>
+            <th><img id="" src="bandeiras/RioGrandeDoNorte.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Ceará</td>
+            <td>8,8 Milhões</td>
+            <td>Fortaleza</td>
+            <td>Região Nordeste</td>
+            <th><img id="" src="bandeiras/Ceara.jpg" alt=""></th>
+        </tr>
+        <tr>
+            <td>Piaui</td>
+            <td>3,2 Milhões</td>
+            <td>Teresina</td>
+            <td>Região Nordeste</td>
+            <th><img id="" src="bandeiras/Piaui.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Maranhão</td>
+            <td>6,7 Milhões</td>
+            <td>São Luís</td>
+            <td>Região Nordeste</td>
+            <th><img id="" src="bandeiras/Maranhao.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Mato Grosso do Sul</td>
+            <td>2,75 Milhões</td>
+            <td>Campo Grande</td>
+            <td>Região Centro-Oeste</td>
+            <th><img id="" src="bandeiras/MatoGrossoDoSul.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Mato Grosso do Norte</td>
+            <td>3,6 Milhões</td>
+            <td>Cuiabá</td>
+            <td>Região Centro-Oeste</td>
+            <th><img id="" src="bandeiras/MatoGrosso.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Goiás</td>
+            <td>7 Milhões</td>
+            <td>Goiania</td>
+            <td>Região Centro-Oeste</td>
+            <th><img id="" src="bandeiras/Goias.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Distrito Federal</td>
+            <td>2,8 Milhões</td>
+            <td>Brasília</td>
+            <td>Região Centro-Oeste</td>
+            <th><img id="" src="bandeiras/BandeiraDF.jpg" alt=""></th>
+        </tr>
+        <tr>
+            <td>Tocantins</td>
+            <td>1,5 Milhões</td>
+            <td>Palmas</td>
+            <td>Região Norte</td>
+            <th><img id="" src="bandeiras/Tocantins.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Pará</td>
+            <td>8,1 Milhões</td>
+            <td>Belém</td>
+            <td>Região Norte</td>
+            <th><img id="" src="bandeiras/Para.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Amapá</td>
+            <td>0,7 Milhões</td>
+            <td>Macapá</td>
+            <td>Região Norte</td>
+            <th><img id="" src="bandeiras/Amapa.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Roraima</td>
+            <td>0,6 Milhões</td>
+            <td>Boa Vista</td>
+            <td>Região Norte</td>
+            <th><img id="" src="bandeiras/Roraima.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Amazonas</td>
+            <td>3,9 Milhões</td>
+            <td>Manaus</td>
+            <td>Região Norte</td>
+            <th><img id="" src="bandeiras/Amazonas.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Rondonia</td>
+            <td>1,5 Milhões</td>
+            <td>Porto Velho</td>
+            <td>Região Norte</td>
+            <th><img id="" src="bandeiras/Rondonia.png" alt=""></th>
+        </tr>
+        <tr>
+            <td>Acre</td>
+            <td>0,3 Milhões</td>
+            <td>Rio Branco</td>
+            <td>Região Norte</td>
+            <th><img id="" src="bandeiras/Acre.png" alt=""></th>
+        </tr>
+    </table>
+</body>
+</html>
