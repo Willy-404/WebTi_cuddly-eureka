@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flex</title>
+
+    <style>
+        .container{
+            border: 2px solid green;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            height: 80lvh;
+        }
+        .box{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0; /*O quanto o elemento pode ser reduzido para caber no fluxo*/
+            flex-grow: 0;
+        }
+        .box:hover{
+            flex-grow: 0.1;
+        }
+    </style>
+</head>
+<body>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam laboriosam sequi harum ex
+        aspernatu veritatis consequuntur error officia illo. Assumenda facere consectetur natus voluptas
+        earum similique voluptates ut reiciendis quidem?</p>
+
+    <div class="container">
+    <div class="box" id="box1">box1</div>
+    <div class="box" id="box2">box2</div>
+    <div class="box" id="box3">box3</div>
+    <div class="box" id="box4">box4</div>
+    <div class="box" id="box5">box5</div>
+    </div>
+    
+</body>
+</html>
