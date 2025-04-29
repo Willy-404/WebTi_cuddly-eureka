@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>barquinho</title>
+  <style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: linear-gradient(to top, #cceeff, #ffffff);
+        height: 100vh;
+    }
+
+    .ceu {
+        background: linear-gradient(to top, #87cefa, #ffffff);
+        position: relative;
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+    }
+
+    .nuvem {
+        position: absolute;
+        top: 50px;
+        left: -200px;
+        width: 120px;
+        height: 60px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 40px 0 white, 20px -20px white, 60px -10px white;
+        animation: moverNuvem 60s linear infinite;
+    }
+
+    @keyframes moverNuvem {
+        0% { left: -200px; }
+        100% { left: 110%; }
+    }
+
+    .mar {
+        position: relative;
+        width: 100%;
+        height: 30%;
+        background: #3f5efb;
+        overflow: hidden;
+    }
+
+    .mar::before,
+    .mar::after {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 100%;
+        background: radial-gradient(circle at 50% 50%, #ffffff33 20%, transparent 70%);
+        animation: onda 4s linear infinite;
+        opacity: 0.5;
+    }
+
+    .mar::after {
+        animation-delay: 2s;
+    }
+
+    @keyframes onda {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    .barco {
+        position: absolute;
+        bottom: -3%;
+        left: -100px;
+        width: 80px;
+        height: 80px;
+        background-image: image-set("Barco.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: balancar 2s ease-in-out infinite alternate,moverBarco 30s linear infinite;
+        z-index: 2;
+    }
+
+    @keyframes balancar {
+        0% { transform: rotate(-2deg); }
+        100% { transform: rotate(2deg); }
+    }
+
+    @keyframes moverBarco {
+        0% { left: -100px; }
+        100% { left: 110%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ceu">
+    <div class="nuvem"></div>
+    <div class="barco"></div>
+  </div>
+  <div class="mar"></div>
+</body>
+</html>
