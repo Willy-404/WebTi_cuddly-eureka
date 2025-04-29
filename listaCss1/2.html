@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>   
+
+    <!-- Pergunta: Seja o trecho de código HTML e CSS da figura a seguir e explique porque cada regra foi aplicada em cada item. -->
+    <!--Respostas:
+    1- O Abacaxi fica vermelho pois não há outra regra mais específica para ele;
+    2 e 5- O melão e a Maçã ficam cinzas pois neles se aplica a regra 2, que é mais específica que a regra 1;
+    3- a Pera fica Azul porque nela se aplica a regra 6, específica para seu id;
+    4- A uva fica laranja porque nela se aplica a regra 7, que inclui todos os elementos de id=lip3 e de classe fruta;
+    6 e 7- Carne e Linguiça ficam pretos porque neles se aplica a regra 4, que afeta elementos do tipo li e com classe "churras";
+    8- Pão de alho fica magenta porque nele se aplica a regra 5, que define essa cor para todos os elementos que sejam da classe "churras" e que 
+    tenham o atributo draggable="true"    
+    -->
+
+   <title>Exemplo especificidade de seletores</title>
+   <style>
+      /*regra 1*/ li{color:red;}
+      /*regra 2*/ .churras{color:green;}
+      /*regra 3*/ .fruta{color:gray}
+      /*regra 4*/ li+li.churras{color: black;}
+      /*regra 5*/ .churras[draggable="true"]{color: magenta;}
+      /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+      /*regra 7*/ #lip3.fruta{color:orange}
+      /*regra 8*/ ol>li.churras#lip5{color:purple}
+   </style>
+</head>
+<body>   
+   <ol>
+   <!--item 1--> <li id="lip0">Abacaxi</li>
+   <!--item 2--> <li           class="fruta">Melão</li>
+   <!--item 3--> <li id="lip2" class="fruta">Pera</li>
+   <!--item 4--> <li id="lip3" class="fruta">Uva</li>
+   <!--item 5--> <li id="lip4" class="fruta">Maçã</li>
+   <!--item 6--> <li           class="churras">Carne</li>
+   <!--item 7--> <li           class="churras">Linguiça</li>
+   <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
+   </ol>   
+</body>
+
+</html>
