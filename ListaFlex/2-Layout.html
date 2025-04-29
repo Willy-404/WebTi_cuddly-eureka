@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Flex 2</title>
+  <style>
+    body {
+      background: #999;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 50px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      width: 300px;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .pessoa {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .user:last-child {
+      border-bottom: none;
+    }
+
+    .foto {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 12px;
+      object-fit: cover;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nome {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .endereco {
+      color: #888;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="pessoa">
+      <img class="foto" src="Fotos/Shaco.jpg" alt="" />
+      <div class="info">
+        <div class="nome">Shaco</div>
+        <div class="endereco">6765 Shady Ln Dr</div>
+      </div>
+    </div>
+    <div class="pessoa">
+      <img class="foto" src="Fotos/Caitlyn.jpg" alt="" />
+      <div class="info">
+        <div class="nome">Caitlyn</div>
+        <div class="endereco">2420 Paddock Way</div>
+      </div>
+    </div>
+    <div class="pessoa">
+      <img class="foto" src="Fotos/Lux.jpg" alt="" />
+      <div class="info">
+        <div class="nome">Lux</div>
+        <div class="endereco">6727 Airplane Ave</div>
+      </div>
+    </div>
+    <div class="pessoa">
+      <img class="foto" src="Fotos/Mordekaiser.jpg" alt="" />
+      <div class="info">
+        <div class="nome">Mordekaiser</div>
+        <div class="endereco">6685 Blossom Hill Rd</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
