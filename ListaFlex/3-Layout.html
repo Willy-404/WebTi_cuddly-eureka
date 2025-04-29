@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade 3</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: white;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .foto {
+      flex: 1;
+      height: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      transition: flex 0.3s;
+    }
+
+    .foto.main {
+      flex: 3;
+    }
+
+    .foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(to top, black, transparent);
+      color: white;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: white;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="foto">
+      <img src="Fotos/Shaco.jpg" alt="">
+    </div>
+    <div class="foto main">
+      <img src="Fotos/Mordekaiser.jpg" alt="">
+      <div class="info">
+        <div>Mordekaiser</div>
+        <small>"Meu armamento é como meu estilo musical, Metal e Pesado"</small>
+      </div>
+    </div>
+    <div class="foto">
+      <img src="Fotos/Caitlyn.jpg" alt="">
+    </div>
+    <div class="foto">
+      <img src="Fotos/Lux.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
