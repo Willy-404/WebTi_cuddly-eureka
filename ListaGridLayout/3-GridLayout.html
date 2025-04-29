@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Grid 3</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "left banner right"
+        "left main right"
+        "left low right"
+        "footer footer footer";
+      grid-template-columns: 1fr 3fr 1fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    header {
+      grid-area: header;
+      background: orange;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .banner {
+      grid-area: banner;
+      background: red;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .left {
+      grid-area: left;
+      background: green;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .right {
+      grid-area: right;
+      background: gold;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      grid-area: main;
+      background: dodgerblue;
+      padding: 10px;
+      text-align: center;
+      color: black;
+      min-height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+      text-align: center;
+      
+    }
+
+    .low {
+      grid-area: low;
+      background: lightgreen;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer {
+      grid-area: footer;
+      background: cornflowerblue;
+      padding: 10px;
+      text-align: center;
+      color: black;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        grid-template-areas:
+          "header"
+          "banner"
+          "left"
+          "main"
+          "right"
+          "low"
+          "footer";
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Header</header>
+    <div class="banner">Banner</div>
+    <aside class="left">Left Aside</aside>
+    <main>Main Content</main>
+    <aside class="right">Right Aside</aside>
+    <div class="low">Low Content</div>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

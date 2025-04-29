@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Grid 2</title>
+  <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body, html {
+        height: 100%;
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas:
+        "a . b"
+        "c d d"
+        ;
+        grid-template-columns: 1fr 1fr 100px;
+        grid-template-rows: auto 1fr;
+        gap: 10px;
+        height: 100vh;
+        padding: 10px;
+        background: #f0f0f0;
+    }
+
+    .a {
+        grid-area: a;
+        background: #333;
+        color: white;
+        padding: 1rem;
+    }
+    .b {
+        grid-area: b;
+        background: #333;
+        color: white;
+        padding: 1rem;
+    }
+    .c {
+        grid-area: c;
+        background: #333;
+        color: white;
+        padding: 1rem;
+    }
+    .d {
+        grid-area: d;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        background: #444;
+        padding: 10px;
+    }
+
+    .d div {
+      background: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="a">A</div>
+    <div class="b">B</div>
+    <div class="c">C</div>
+    <div class="d">
+      <div>E</div>
+      <div>F</div>
+      <div>G</div>
+      <div>M</div>
+      <div>I</div>
+      <div>J</div>
+    </div>
+  </div>
+</body>
+</html>
