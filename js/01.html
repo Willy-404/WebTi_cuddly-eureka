@@ -10,9 +10,12 @@
         let a = Number(prompt("Digite a variavel a"));
         let b = Number(prompt("Digite a variavel b"));
         numero = (a+b);
-        console.log(numero);
+        console.log("A soma é "+numero);
         alert("A soma dos Números é "+numero+" não diga não precisa a a aaaa");
         /*crie um paragrafo, adcione ele como filho de body e defina o conteudo de p como a soma*/
+        let p = document.createElement("p");
+        p.innerHTML = "a+b = "+numero;
+        document.body.appendChild(p);
     </script>
 </body>
 </html>
