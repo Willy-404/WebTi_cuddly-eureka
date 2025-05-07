@@ -8,11 +8,40 @@
         /*Faca um programa que solicite ao usuário um numero, usando prompt e em seguida
         faca a contagem até esse numero, imprimindo cada elemento no prompt
         */
+        let n = Number(prompt("Digite um número"));
+        let i = 0;
+        let contagem = "";
+        for (i=0;i<=n;i++){
+            console.log(i);
+            contagem = String(contagem+" ")+i;
+        }
 
+        let p = document.createElement("p");
+        p.innerHTML = "Contagem até seu numero: "+contagem;
+        document.body.appendChild(p);
 
         /* Adcione um elemento da listagem ao body e adcione cada
         numero da contagem a um item <li>
         */
+
+        let listagemUL=document.createElement("ul");
+        /*se quiser transformar em flex*/
+        listagemUL.style.display="Flex";
+        listagemUL.style.flexWrap = "wrap";
+        document.body.appendChild(listagemUL);
+        for (i=0;i<=n;i++){
+            item=document.createElement("li");
+            item.innerHTML=i;
+            item.id="n"+i;
+            listagemUL.appendChild(item);
+            item.style.height = "50px";
+            item.style.width = "50px";
+            /*altere a cor pra vermeio se o numero for par*/
+            if(i%2==0){
+                item.style.color="red";
+            }
+        }
+
     </script>
 </body>
 </html>
