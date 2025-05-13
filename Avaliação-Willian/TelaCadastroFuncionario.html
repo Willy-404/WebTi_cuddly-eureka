@@ -12,7 +12,8 @@
             font-family: Arial, sans-serif;
         }
 
-        body,html {
+        body,
+        html {
             height: 100%;
         }
 
@@ -23,14 +24,14 @@
         }
 
         header {
-            background: #5496c5;
+            background-color: #5496c5;
             padding: 0.5rem 1rem;
             display: flex;
             gap: 1rem;
         }
 
         header button {
-            background: transparent;
+            background-color: transparent;
             border: none;
             color: black;
             font-size: 14px;
@@ -55,7 +56,7 @@
             margin-bottom: 2rem;
         }
 
-        form {
+        .painel {
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
@@ -93,12 +94,33 @@
             padding: 0.5rem 1.5rem;
             border: none;
             border-radius: 3px;
-            background: #ccc;
+            background: white;
             cursor: pointer;
         }
 
-        .botoes button:hover {
-            background: #bbb;
+        @media (max-width: 900px) {
+            .textfield {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem;
+            }
+
+            .painel {
+                gap: 1rem;
+            }
+
+            .textfield {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .textfield button {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -112,7 +134,7 @@
 
     <main>
         <h1>Cadastro de Funcionário</h1>
-        <form>
+        <div class="painel">
             <div class="textfield">
                 <label for="cargo">Cargo</label>
                 <input type="text" id="cargo">
@@ -142,10 +164,10 @@
                 <input type="email" id="email">
             </div>
             <div class="botoes">
-                <button type="submit">Cadastrar</button>
+                <button type="button">Cadastrar</button>
                 <button type="button">Voltar</button>
             </div>
-        </form>
+        </div>
     </main>
 </body>
 
