@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cadastro Funcionário</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "content"
+                ;
+            grid-template-columns: 100% 100%;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background:  #5496c5;
+            color: white;
+            font-size: larger;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            grid-area: content;
+            background: #386b8f;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>Cadastro de Funcionário</header>
+        <main></main>
+    </div>
+</body>
+
+</html>
