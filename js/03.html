@@ -3,13 +3,15 @@
 <head>
     <title>Conta Clique</title>
 </head>
+
 <body>
-    <button id="button">Clica em Mim chora por mim</button>
+    <button id="botao">Clica em Mim chora por mim</button>
+
     <script>
-        let button = document.querySelector("#button");
-            let i = 0;
-        button.addEventListener("onClickConte",()=>{
-            button.innerHTML=i;
+        let meuBotao = document.querySelector("#botao");
+        let i = 0;
+        meuBotao.addEventListener("click",()=>{
+            meuBotao.innerHTML= i;
             i++
         });
     </script>
