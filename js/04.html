@@ -12,7 +12,7 @@
     <script>
         let meuBotao = document.querySelector("#botao");
         meuBotao.addEventListener("click",()=>{
-            meuBotao.innerHTML= Math.random(100)*100;
+            meuBotao.innerHTML= Math.trunc(Math.random(100)*100);
         });
     </script>
 </body>
