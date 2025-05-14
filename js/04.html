@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Numero Aleatorio</title>
+</head>
+
+<body>
+    <h1>Numero Aleatorio</h1>
+    <button id="botao">Clica em Mim chora por mim</button>
+    <p id="nrand"></p>
+
+    <script>
+        let meuBotao = document.querySelector("#botao");
+        meuBotao.addEventListener("click",()=>{
+            meuBotao.innerHTML= Math.random(100)*100;
+        });
+    </script>
+</body>
+</html>
