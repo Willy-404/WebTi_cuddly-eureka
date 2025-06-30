@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Clique aqui</button>
+    <p id="txt">op1</p>
+    <p id="num">op2</p>
+    <p id="vf">op3</p>
+    <p id="pindefinido">op4</p>
+    <p id="nulo">op5</p>
+    <p id="obj">op6</p>
+    <p id="parray">op7</p>
+
+    <script>
+        let texto = "String"
+        let numero = Number("11")
+        let Vf = true
+        let indefinido = undefined
+        let Nulo = null
+        let objeto = {}
+        let array = []
+
+        txt.innerHTML = typeof(texto)
+        num.innerHTML = typeof(numero)
+        vf.innerHTML = typeof(Vf)
+        pindefinido.innerHTML = typeof(indefinido)
+        nulo.innerHTML = typeof(Nulo) 
+        
+        if(Nulo === null){
+           nulo.innerHTML = "null" 
+        }
+        
+        obj.innerHTML = typeof(objeto)
+        if(Array.isArray(array)){
+            parray.innerHTML = "array"
+        }
+        
+        
+    </script>
+</body>
+</html>

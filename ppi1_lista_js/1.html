@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é JavaScript?</title>
+</head>
+<body>
+    <h1 id="tituloPagina">O que é JavaScript?</h1>
+    <p id="paragrafo">A) A motivação foi a necessidade de dinamismo e interatividade nas paginas web <br>
+    B) Os recursos disponiveis <br>
+    C) E um ambiente controlado para executar plugin com segurança <br>
+    D) O documento é o arquivo html, o console é a parte que permite fazer modificações temporarias e resultados na propria web, alert são mensagem que aparecem na tela no momento codificado no javaScript da pagina <br>
+    </p>
+
+    <script>
+        console.log("oi")
+        alert("Opa")
+        let h = new Date()
+        document.getElementById("paragrafo").innerHTML = "A hora atual: " + h.toLocaleTimeString
+    </script>
+</body>
+</html>
