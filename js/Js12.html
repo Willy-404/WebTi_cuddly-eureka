@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas</title>
+</head>
+<body>
+  <h1>Canvas</h1>
+  <canvas id="meuCanvas" width="600" height="500" style="border:1px solid #ff0000;"></canvas>
+
+  <script>
+  
+    let canvas = document.getElementById("meuCanvas");
+    let ctx = canvas.getContext("2d");
+
+  
+    ctx.fillStyle = "red";
+    ctx.fillRect(70, 70, 120, 70); 
+
+ 
+    ctx.beginPath();
+    ctx.arc(220, 170, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+    ctx.closePath();
+
+
+    ctx.fillStyle = "black";
+    ctx.font = "20px Arial";
+    ctx.fillText("Canvas!", 120, 250);
+  </script>
+</body>
+</html>

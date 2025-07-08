@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos em JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #divhover {
+      width: 200px;
+      height: 50px;
+      border: 1px solid #000;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input, select, button {
+      margin: 10px 0;
+      padding: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <button id="botaoAlerta">Clique aqui</button><br>
+
+  <input type="text" id="tecla" placeholder="Digite algo"><br>
+
+  <div id="divhover">Passe o mouse aqui</div>
+
+  <select id="selecao">
+    <option value="">Escolha uma cor</option>
+    <option value="blue">Azul</option>
+    <option value="green">Verde</option>
+    <option value="red">Vermelho</option>
+  </select>
+
+  <script>
+    document.getElementById('botaoAlerta').addEventListener('click', function () {
+      alert('Botão clicado!');
+    });
+
+    document.getElementById('tecla').addEventListener('keydown', function (event) {
+      console.log('Tecla pressionada:', event.key);
+    });
+
+    document.getElementById('tecla').addEventListener('focus', function () {
+      this.style.backgroundColor = 'yellow';
+    });
+
+    document.getElementById('tecla').addEventListener('blur', function () {
+      this.style.backgroundColor = '';
+    });
+
+    document.getElementById('divhover').addEventListener('mouseover', function () {
+      this.style.backgroundColor = 'lightblue';
+    });
+
+    document.getElementById('divhover').addEventListener('mouseout', function () {
+      this.style.backgroundColor = '';
+    });
+
+    document.getElementById('selecao').addEventListener('change', function () {
+      document.body.style.backgroundColor = this.value;
+    });
+  </script>
+</body>
+</html>

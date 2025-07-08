@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fundo aleatorio</title>
+</head>
+<body>
+  <button onclick="alterarCorDeFundo()">Alterar Cor de Fundo</button>
+
+  <script>
+    function alterarCorDeFundo() {
+      const corAleatoria = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+      document.body.style.backgroundColor = corAleatoria;
+    }
+  </script>
+</body>
+</html>

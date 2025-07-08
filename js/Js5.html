@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Randola</title>
+</head>
+<body>
+    <h2><b>Numero aleatorio:</b></h2>
+    <label for="valormin">Numero minimo: </label>
+    <input id= "valormin" type="number" value="0">
+
+    <label for="valormax">Numero maximo: </label>
+    <input id= "valormax" type="number" value="100">
+
+    <button id="botao"> Gerar numero aleatorio</button>
+
+    <script>
+        let meuBotao = document.querySelector("#botao")
+        let vMin = document.querySelector("#valormin")
+        let vMax = document.querySelector("#valormax")
+        meuBotao.addEventListener("click", ()=>{
+           let delta = Number( vMax.value ) - Number( vMin.value)
+           let numero = Math.trunc((Math.random() * delta) + Number(vMin.value) )
+
+           let p= document.createElement("p")
+           p.innerHTML = "o numero aleatorio: " + numero
+           document.body.appendChild(p)
+       })
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cor aleatoria com espaço</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .cor {
+      width: 100px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cor" id="c1">#000000</div>
+    <div class="cor" id="c2">#000000</div>
+    <div class="cor" id="c3">#000000</div>
+    <div class="cor" id="c4">#000000</div>
+    <div class="cor" id="c5">#000000</div>
+  </div>
+
+  <script>
+    function gerarCorAleatoria() {
+      return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0').toUpperCase();
+    }
+
+    function atualizarCores() {
+      for (let i = 1; i <= 5; i++) {
+        let cor = gerarCorAleatoria();
+        let el = document.getElementById(`c${i}`);
+        el.style.backgroundColor = cor;
+        el.textContent = cor;
+        el.style.color = parseInt(cor.substring(1), 16) > 0xffffff / 2 ? '#000' : '#fff';
+      }
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.code === 'Space') {
+        event.preventDefault(); 
+        atualizarCores();
+      }
+    });
+    
+  </script>
+</body>
+</html>

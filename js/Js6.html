@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador não funcional de Palíndromos</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Verificador não funcional de Palíndromos</h1>
+    <input type="text" id="palavra" placeholder="Digite o possivel palíndromo">
+    <button id="botao">Verificar</button>
+  </div>
+
+  <script>
+     let meuBotao = document.querySelector("#botao")
+     meuBotao.addEventListener("click", ()=>{
+           let palavra = document.querySelector("#palavra")
+        
+            function ePalindromo(str) {
+                let p = str
+                let reverso = p.split('').reverse().join('');
+                return p === reverso;
+            }
+
+            if (ePalindromo(palavra)) {
+                let p= document.createElement("p")
+                p.innerHTML = "A palavra "+palavra+" é um palíndromo!"
+                document.body.appendChild(p)  
+            } else {
+                let p= document.createElement("p")
+                p.innerHTML = "A palavra "+palavra+" não é um palíndromo!"
+                document.body.appendChild(p)           
+             }
+       })
+      
+  </script>
+</body>
+</html>
